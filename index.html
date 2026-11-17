@@ -4,202 +4,155 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NOBODY · Premium Fightwear</title>
-<meta name="description" content="NOBODY makes premium fight gear and clothing: gloves, shorts, wraps and apparel for boxing, Muay Thai, kickboxing, MMA and every style in between. Richmond, VA.">
-<meta name="theme-color" content="#0a0a09">
+<meta name="description" content="NOBODY. Premium fightwear for every style, Muay Thai at heart. Gloves, shorts, wraps and apparel. Richmond, VA.">
+<meta name="theme-color" content="#efebe4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Inter+Tight:wght@300;400;500;600&family=Noto+Serif+Thai:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Inter+Tight:wght@300;400;500&family=Noto+Serif+Thai:wght@400&display=swap" rel="stylesheet">
 <style>
-  /* Look: fashion house meets fight gym. Ink, bone, oxblood, a touch of old gold. Gear first, story second. */
+  /* Look: fashion house lookbook. Bone paper, black ink, black & white fight photography, one oxblood accent. */
   :root{
-    --ink:#0a0a09; --ink2:#141312; --bone:#ebe5d9; --paper:#d9d3c8; --stone:#8a857b; --line:rgba(235,229,217,.14);
-    --ox:#7a141c; --gold:#b8955a;
+    --paper:#efebe4; --ink:#111110; --mute:#6d685f; --line:rgba(17,17,16,.16); --ox:#7a141c;
     --serif:"Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
     --sans:"Inter Tight", "Helvetica Neue", Arial, sans-serif;
-    --thai:"Noto Serif Thai", serif;
-    color-scheme: dark;
   }
   *{box-sizing:border-box}
   [hidden]{display:none!important}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--ink);color:var(--bone);font:300 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body{margin:0;background:var(--paper);color:var(--ink);font:300 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
-  ::selection{background:var(--ox);color:var(--bone)}
-  :focus-visible{outline:1px solid var(--gold);outline-offset:4px}
-  .wrap{max-width:1440px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left));padding-right:max(24px,env(safe-area-inset-right))}
-  .lbl{font:500 .68rem/1.4 var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--stone)}
+  ::selection{background:var(--ink);color:var(--paper)}
+  :focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+  .wrap{max-width:1480px;margin:0 auto;padding-left:max(28px,env(safe-area-inset-left));padding-right:max(28px,env(safe-area-inset-right))}
+  .lbl{font:500 .66rem/1.4 var(--sans);letter-spacing:.24em;text-transform:uppercase}
+  .mute{color:var(--mute)}
   h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;line-height:.95;letter-spacing:-.01em}
-  h2{font-size:clamp(2.8rem,6.4vw,5.8rem)}
   em{font-style:italic}
-  p{margin:0 0 1.1em}
-  .num{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:1.05rem}
+  p{margin:0 0 1em}
 
-  .btn{display:inline-flex;align-items:center;gap:12px;font:500 .72rem var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:18px 28px;background:var(--bone);color:var(--ink);border:1px solid var(--bone);cursor:pointer;transition:background .3s,color .3s}
-  .btn:hover{background:var(--gold);border-color:var(--gold)}
-  .btn.line{background:transparent;color:var(--bone)}
-  .btn.line:hover{background:var(--bone);color:var(--ink)}
+  /* photos: black & white, one look across the whole site */
+  .bw{filter:grayscale(1) contrast(1.08) brightness(.96)}
+  .frame{overflow:hidden;background:#cfc9be}
+  .frame img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+  .hov:hover .frame img, figure:hover .frame img{transform:scale(1.035)}
 
   /* ===== header ===== */
-  header{position:sticky;top:0;z-index:60;background:rgba(10,10,9,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-  .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:72px}
-  .bar nav{display:flex;gap:30px}
-  .bar nav a,.bar .act{font:500 .68rem var(--sans);letter-spacing:.24em;text-transform:uppercase;opacity:.8;transition:opacity .2s}
-  .bar nav a:hover,.bar .act:hover{opacity:1}
-  .word{font-family:var(--serif);font-size:1.7rem;letter-spacing:.32em;padding-left:.32em;line-height:1}
-  .bar .act{justify-self:end;border-bottom:1px solid var(--bone);padding-bottom:3px}
-  @media (max-width:820px){.bar nav{display:none}.bar{grid-template-columns:auto 1fr}.word{font-size:1.35rem}}
+  header{position:fixed;inset:0 0 auto;z-index:60;color:#fff;mix-blend-mode:difference}
+  .bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:74px}
+  .bar nav{display:flex;gap:28px}
+  .bar a.l{font:500 .66rem var(--sans);letter-spacing:.24em;text-transform:uppercase}
+  .bar .word{font-family:var(--serif);font-size:1.5rem;letter-spacing:.34em;padding-left:.34em}
+  .bar .act{justify-self:end}
+  @media (max-width:820px){.bar nav{display:none}.bar{grid-template-columns:1fr auto}.bar .word{justify-self:start;padding-left:0}}
 
   /* ===== hero ===== */
-  .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-  .hero .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28}
-  .hero .grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;min-height:calc(100svh - 72px);padding-block:60px}
-  .hero .grid > *{min-width:0}
-  @media (max-width:900px){.hero .grid{grid-template-columns:1fr;min-height:0;padding-block:44px 56px;gap:34px}}
-  .hero h1{font-size:clamp(3.6rem,8.4vw,8.6rem);line-height:.88;margin-top:22px}
-  .hero h1 em{color:var(--gold)}
-  .hero .lead{max-width:44ch;margin:26px 0 34px;font-size:1.08rem;color:#d2cbbd}
-  .hero .lead b{font-weight:500;color:var(--bone)}
-  .ctas{display:flex;gap:12px;flex-wrap:wrap}
-  .feature{position:relative;background:var(--paper)}
-  .feature img{width:100%;aspect-ratio:4/5;object-fit:cover}
-  .feature .cap{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;align-items:end;gap:16px;padding:18px 20px;color:var(--ink)}
-  .feature .cap b{display:block;font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.1}
-  .feature .cap .lbl{color:#4d483f}
-  .dots{display:flex;gap:8px}
-  .dot{width:26px;height:26px;border-radius:50%;border:1px solid rgba(10,10,9,.35);cursor:pointer;padding:0;background:var(--c);transition:transform .2s}
-  .dot[aria-pressed="true"]{outline:1px solid var(--ink);outline-offset:3px}
+  .hero{position:relative;height:100svh;min-height:640px;color:#fff;overflow:hidden;background:#222}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25),transparent 35%,transparent 55%,rgba(0,0,0,.55))}
+  .hero .in{position:absolute;inset:auto 0 0;z-index:2;padding-bottom:max(30px,env(safe-area-inset-bottom))}
+  .hero .mega{font-family:var(--serif);font-size:clamp(4.5rem,21vw,22rem);line-height:.78;letter-spacing:.02em;margin:0 0 18px -0.04em;white-space:nowrap}
+  .hero .row{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.35);padding-top:16px}
+  .hero .row p{margin:0;max-width:44ch;font-size:1rem}
+  .hero .row a{border-bottom:1px solid #fff;padding-bottom:3px}
 
-  /* styles strip */
-  .strip{border-bottom:1px solid var(--line);overflow:hidden}
-  .strip .track{display:flex;width:max-content;animation:scroll 40s linear infinite}
-  .strip span{font-family:var(--serif);font-size:1.5rem;padding:16px 0;white-space:nowrap}
-  .strip span::after{content:"·";margin:0 30px;color:var(--gold)}
-  .strip span.th{font-family:var(--thai);font-size:1.25rem;color:var(--gold)}
-  @keyframes scroll{to{transform:translateX(-50%)}}
-  @media (prefers-reduced-motion:reduce){.strip .track{animation:none}}
+  section{padding:140px 0}
+  @media (max-width:820px){section{padding:90px 0}}
 
-  section{padding:130px 0}
-  @media (max-width:820px){section{padding:84px 0}}
-  .top{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:54px}
-  .top p{max-width:40ch;margin:0;color:#bdb6a8}
+  /* ===== intro ===== */
+  .intro .grid{display:grid;grid-template-columns:1fr 2fr;gap:40px}
+  @media (max-width:820px){.intro .grid{grid-template-columns:1fr;gap:20px}}
+  .intro .big{font-family:var(--serif);font-size:clamp(1.9rem,3.6vw,3.3rem);line-height:1.15;max-width:26ch;margin:0}
+  .intro .big em{color:var(--ox)}
+  .pair{display:grid;grid-template-columns:5fr 4fr;gap:24px;margin-top:110px;align-items:end}
+  .pair .a .frame{aspect-ratio:4/5}
+  .pair .b .frame{aspect-ratio:3/4}
+  .pair .b{margin-bottom:90px}
+  figure{margin:0}
+  figcaption{display:flex;justify-content:space-between;gap:14px;margin-top:12px}
+  figcaption .t{font-family:var(--serif);font-style:italic;font-size:1rem;letter-spacing:0;text-transform:none}
+  @media (max-width:820px){.pair{grid-template-columns:1fr 1fr;gap:12px;margin-top:60px}.pair .b{margin-bottom:0}}
 
-  /* ===== shop ===== */
-  .shop-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
-  .prod{grid-column:span 4;display:flex;flex-direction:column}
-  .prod.big{grid-column:span 6}
-  @media (max-width:1000px){.prod,.prod.big{grid-column:span 6}}
-  @media (max-width:640px){.prod,.prod.big{grid-column:span 12}}
-  .prod .ph{position:relative;background:var(--paper);overflow:hidden;aspect-ratio:4/5}
-  .prod .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
-  .prod:hover .ph img{transform:scale(1.04)}
-  .prod .badge{position:absolute;top:14px;left:14px;font:500 .6rem var(--sans);letter-spacing:.22em;text-transform:uppercase;background:var(--ink);color:var(--bone);padding:7px 10px}
-  .prod .row1{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-top:18px}
-  .prod h3{font-size:1.75rem}
-  .prod .price{font:500 .72rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);white-space:nowrap}
-  .prod .cat{margin-top:6px}
-  .prod p{color:#a9a294;font-size:.94rem;margin:12px 0 14px}
-  .prod .specs{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px}
-  .prod .specs li{font:400 .74rem var(--sans);border:1px solid var(--line);padding:5px 10px;color:#cfc8ba}
-  .prod .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:14px}
-  .prod .notify{font:500 .68rem var(--sans);letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid var(--bone);padding-bottom:2px;cursor:pointer;background:none;border-top:0;border-left:0;border-right:0;color:var(--bone)}
-  .prod .dots .dot{width:20px;height:20px;border-color:var(--line)}
-  .prod .dots .dot[aria-pressed="true"]{outline-color:var(--bone)}
-  .note{margin-top:30px;color:var(--stone);font-size:.85rem}
+  /* ===== collection ===== */
+  .coll{background:var(--ink);color:var(--paper)}
+  .coll .mute{color:#8f8a80}
+  .coll .grid{display:grid;grid-template-columns:5fr 7fr;gap:70px;align-items:start}
+  @media (max-width:980px){.coll .grid{grid-template-columns:1fr;gap:40px}}
+  .coll .side{position:sticky;top:110px}
+  @media (max-width:980px){.coll .side{position:static}}
+  .coll .side .frame{aspect-ratio:4/5;background:#222}
+  .coll h2{font-size:clamp(3rem,6.4vw,6rem)}
+  .coll h2 em{color:#c9a96e}
+  .coll .lead{color:#c8c2b6;max-width:44ch;margin:22px 0 46px}
+  .items{border-top:1px solid rgba(239,235,228,.2)}
+  .item{display:grid;grid-template-columns:56px 1fr auto;gap:18px;padding:28px 0;border-bottom:1px solid rgba(239,235,228,.2);align-items:baseline}
+  .item .n{font-family:var(--serif);font-style:italic;color:#8f8a80}
+  .item h3{font-size:clamp(1.7rem,2.8vw,2.5rem);transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+  .item:hover h3{transform:translateX(10px);font-style:italic}
+  .item .d{color:#b3ada1;margin:10px 0 0;font-size:.95rem;max-width:52ch}
+  .item .specs{margin-top:12px;color:#8f8a80}
+  .item .r{text-align:right;white-space:nowrap}
+  .item .r button{background:none;border:0;color:var(--paper);font:500 .64rem var(--sans);letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid var(--paper);padding:0 0 3px;cursor:pointer;margin-top:10px}
+  @media (max-width:640px){.item{grid-template-columns:34px 1fr}.item .r{grid-column:2;text-align:left}}
+  .coll .fine{margin-top:26px;color:#8f8a80;font-size:.85rem}
 
-  /* ===== made ===== */
-  .made{background:var(--bone);color:var(--ink)}
-  .made .lbl{color:#6f695e}
-  .made .num{color:var(--ox)}
-  .made h2 em{color:var(--ox)}
-  .made .top p{color:#3b372f}
-  .pillars{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(10,10,9,.2)}
-  @media (max-width:900px){.pillars{grid-template-columns:1fr}}
-  .pillar{padding:30px 28px 34px 0}
-  .pillar + .pillar{padding-left:28px;border-left:1px solid rgba(10,10,9,.2)}
-  @media (max-width:900px){.pillar + .pillar{border-left:0;padding-left:0;border-top:1px solid rgba(10,10,9,.2)}}
-  .pillar h3{font-size:2rem;margin:10px 0 12px}
-  .pillar p{color:#3b372f;margin:0}
-  .mats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:60px}
-  @media (max-width:700px){.mats{grid-template-columns:1fr 1fr}}
-  .mat img{aspect-ratio:1;width:100%;object-fit:cover}
-  .mat span{display:block;margin-top:8px;font:500 .64rem var(--sans);letter-spacing:.22em;text-transform:uppercase;color:#5a554b}
+  /* ===== band ===== */
+  .band{position:relative;height:92svh;min-height:560px;overflow:hidden;color:#fff;display:grid;place-items:center;text-align:center;padding:0;background:#222}
+  .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .band::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.38)}
+  .band blockquote{position:relative;z-index:2;margin:0;font-family:var(--serif);font-size:clamp(2.2rem,5.4vw,5.2rem);line-height:1.05;max-width:17ch;padding:0 24px}
+
+  /* ===== styles ===== */
+  .styles .top{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+  .styles h2{font-size:clamp(3rem,6.4vw,6rem)}
+  .styles h2 em{color:var(--ox)}
+  .styles .top p{max-width:40ch;margin:0;color:var(--mute)}
+  .cards{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:24px}
+  @media (max-width:900px){.cards{grid-template-columns:1fr 1fr}.cards .c1{grid-column:span 2}}
+  .card .frame{aspect-ratio:3/4}
+  .card.c1 .frame{aspect-ratio:4/5}
+  .card h3{font-size:2.1rem;margin-top:16px}
+  .card h3 small{font-family:"Noto Serif Thai",serif;font-size:.5em;color:var(--ox);margin-left:10px;vertical-align:middle}
+  .card p{color:var(--mute);margin:8px 0 0;font-size:.94rem;max-width:40ch}
+  .also{display:flex;flex-wrap:wrap;gap:10px 36px;margin-top:60px;border-top:1px solid var(--line);padding-top:26px;align-items:baseline}
+  .also span{font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,2.1rem)}
 
   /* ===== gallery ===== */
-  .g{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
-  .g figure{margin:0;cursor:zoom-in}
-  .g .ph{overflow:hidden;background:var(--ink2)}
-  .g img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
-  .g figure:hover img{transform:scale(1.045)}
-  .g figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:10px}
-  .g figcaption span:last-child{color:var(--bone);font-family:var(--serif);font-style:italic;letter-spacing:0;text-transform:none;font-size:.95rem}
-  .f1{grid-column:1/8} .f1 .ph{aspect-ratio:4/3}
-  .f2{grid-column:8/13} .f2 .ph{aspect-ratio:4/5}
-  .f3{grid-column:1/5} .f3 .ph{aspect-ratio:4/5}
-  .f4{grid-column:5/13} .f4 .ph{aspect-ratio:16/9}
-  @media (max-width:820px){.g{grid-template-columns:1fr 1fr;gap:12px}.g figure{grid-column:span 2!important}.f2,.f3{grid-column:span 1!important}}
-  .lb{position:fixed;inset:0;z-index:90;background:rgba(10,10,9,.96);display:grid;place-items:center;padding:60px 24px;cursor:zoom-out}
-  .lb img{max-height:82vh;width:auto;max-width:100%;object-fit:contain}
-  .lb p{position:absolute;bottom:24px;left:0;right:0;text-align:center;font-family:var(--serif);font-style:italic}
-  .lb button{position:absolute;top:20px;right:24px;background:none;border:0;color:var(--bone);font:500 .7rem var(--sans);letter-spacing:.24em;text-transform:uppercase;cursor:pointer}
-
-  /* ===== culture ===== */
-  .culture{border-top:1px solid var(--line)}
-  .styles{border-top:1px solid var(--line)}
-  .st{display:grid;grid-template-columns:70px 1fr auto;align-items:baseline;gap:20px;padding:20px 0;border-bottom:1px solid var(--line)}
-  .st .n{font-family:var(--serif);font-style:italic;color:var(--stone)}
-  .st h3{font-size:clamp(2rem,4.8vw,4.2rem);line-height:1;transition:transform .5s cubic-bezier(.2,.7,.2,1),color .3s}
-  .st h3 small{font-family:var(--thai);font-size:.38em;color:var(--gold);margin-left:14px;vertical-align:middle}
-  .st .o{text-align:right;max-width:32ch}
-  .st:hover h3{transform:translateX(14px);font-style:italic;color:var(--gold)}
-  .st.lead h3{color:var(--gold)}
-  @media (max-width:820px){.st{grid-template-columns:36px 1fr}.st .o{grid-column:2;text-align:left}}
-  .rites{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:90px;border-top:1px solid var(--line)}
-  @media (max-width:1000px){.rites{grid-template-columns:1fr 1fr}}
-  @media (max-width:560px){.rites{grid-template-columns:1fr}}
-  .rite{padding:28px 24px 32px 0;border-bottom:1px solid var(--line)}
-  .rite + .rite{padding-left:24px;border-left:1px solid var(--line)}
-  @media (max-width:1000px){.rite:nth-child(3){border-left:0;padding-left:0}}
-  @media (max-width:560px){.rite{border-left:0!important;padding-left:0!important}}
-  .rite h3{font-size:1.8rem;margin:10px 0 12px}
-  .rite p{color:#a9a294;font-size:.94rem;margin:0}
-
-  /* ===== quote band ===== */
-  .band{position:relative;min-height:70vh;display:grid;place-items:center;text-align:center;overflow:hidden}
-  .band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.7}
-  .band::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(10,10,9,.15),rgba(10,10,9,.75))}
-  .band blockquote{position:relative;z-index:2;margin:0;font-family:var(--serif);font-size:clamp(2.1rem,5vw,4.6rem);line-height:1.08;max-width:18ch;padding:0 24px}
-  .band blockquote em{color:var(--gold)}
-
-  /* ===== team ===== */
-  .team .grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-  @media (max-width:900px){.team .grid{grid-template-columns:1fr;gap:36px}}
-  .team .ph{aspect-ratio:4/5;overflow:hidden}
-  .team .ph img{width:100%;height:100%;object-fit:cover}
-  .team ul{list-style:none;padding:0;margin:28px 0 34px;border-top:1px solid var(--line)}
-  .team li{display:flex;justify-content:space-between;gap:20px;padding:16px 0;border-bottom:1px solid var(--line)}
-  .team li b{font-family:var(--serif);font-weight:400;font-size:1.25rem}
+  .gallery{padding-top:0}
+  .gl{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+  .gl figure{cursor:zoom-in}
+  .gl .g1{grid-column:1/8} .gl .g1 .frame{aspect-ratio:16/10}
+  .gl .g2{grid-column:8/13} .gl .g2 .frame{aspect-ratio:4/5}
+  .gl .g3{grid-column:1/5}  .gl .g3 .frame{aspect-ratio:3/4}
+  .gl .g4{grid-column:5/9}  .gl .g4 .frame{aspect-ratio:3/4}
+  .gl .g5{grid-column:9/13} .gl .g5 .frame{aspect-ratio:3/4}
+  .gl .g6{grid-column:3/11} .gl .g6 .frame{aspect-ratio:16/9}
+  @media (max-width:820px){.gl{grid-template-columns:1fr 1fr;gap:12px}.gl figure{grid-column:span 1!important}.gl .g1,.gl .g6{grid-column:span 2!important}}
+  .lb{position:fixed;inset:0;z-index:90;background:rgba(239,235,228,.97);display:grid;place-items:center;padding:60px 24px;cursor:zoom-out}
+  .lb img{max-height:84vh;width:auto;max-width:100%;object-fit:contain}
+  .lb button{position:absolute;top:22px;right:28px;background:none;border:0;font:500 .66rem var(--sans);letter-spacing:.24em;text-transform:uppercase;cursor:pointer;color:var(--ink)}
 
   /* ===== access ===== */
-  .access{border-top:1px solid var(--line);text-align:center}
-  .access h2{font-size:clamp(3rem,8vw,7rem)}
-  .access h2 em{color:var(--gold)}
-  .access p.sub{color:#bdb6a8;max-width:46ch;margin:22px auto 46px}
-  form{display:grid;grid-template-columns:1.3fr 1fr 1fr auto;max-width:1000px;margin:0 auto;border:1px solid var(--line)}
-  form input,form select{font:300 1rem var(--sans);background:transparent;color:var(--bone);border:0;border-right:1px solid var(--line);padding:20px 20px;border-radius:0;width:100%;-webkit-appearance:none;appearance:none}
-  form select option{background:var(--ink);color:var(--bone)}
-  form input::placeholder{color:var(--stone)}
-  form button{font:500 .7rem var(--sans);letter-spacing:.26em;text-transform:uppercase;background:var(--bone);color:var(--ink);border:0;padding:0 32px;cursor:pointer;transition:background .3s}
-  form button:hover{background:var(--gold)}
+  .access{text-align:center;border-top:1px solid var(--line)}
+  .access h2{font-size:clamp(3rem,8vw,7.2rem)}
+  .access h2 em{color:var(--ox)}
+  .access .sub{color:var(--mute);max-width:44ch;margin:22px auto 46px}
+  form{display:grid;grid-template-columns:1.3fr 1fr 1fr auto;max-width:1000px;margin:0 auto;border:1px solid var(--ink)}
+  form input,form select{font:300 1rem var(--sans);background:transparent;color:var(--ink);border:0;border-right:1px solid var(--ink);padding:20px;border-radius:0;width:100%;-webkit-appearance:none;appearance:none}
+  form input::placeholder{color:var(--mute)}
+  form button{font:500 .68rem var(--sans);letter-spacing:.26em;text-transform:uppercase;background:var(--ink);color:var(--paper);border:0;padding:0 34px;cursor:pointer}
+  form button:hover{background:var(--ox)}
   .hp{position:absolute;left:-9999px}
   #status{min-height:1.6em;margin-top:18px;font-family:var(--serif);font-style:italic}
-  @media (max-width:800px){form{grid-template-columns:1fr}form input,form select{border-right:0;border-bottom:1px solid var(--line)}form button{padding:20px}}
+  @media (max-width:800px){form{grid-template-columns:1fr}form input,form select{border-right:0;border-bottom:1px solid var(--ink)}form button{padding:20px}}
 
-  footer{padding:80px 0 calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line)}
-  footer .wm{font-family:var(--serif);font-size:clamp(4.4rem,19vw,17rem);letter-spacing:.12em;line-height:.85;text-align:center}
-  footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:40px}
+  footer{background:var(--ink);color:var(--paper);padding:80px 0 calc(36px + env(safe-area-inset-bottom))}
+  footer .wm{font-family:var(--serif);font-size:clamp(4.4rem,20vw,19rem);letter-spacing:.06em;line-height:.8;text-align:center}
+  footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:44px;color:#8f8a80}
+  footer .credits{margin-top:18px;color:#6f6a62;font-size:.78rem}
 
-  .rv{opacity:0;transform:translateY(26px);transition:opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1)}
+  .rv{opacity:0;transform:translateY(24px);transition:opacity 1.1s cubic-bezier(.2,.7,.2,1), transform 1.1s cubic-bezier(.2,.7,.2,1)}
   .rv.in{opacity:1;transform:none}
   @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 </style>
@@ -209,136 +162,91 @@
 <header>
   <div class="wrap bar">
     <nav>
-      <a href="#shop">Shop</a>
-      <a href="#made">How it's made</a>
-      <a href="#culture">Culture</a>
-      <a href="#gallery">Gallery</a>
+      <a class="l" href="#collection">Collection</a>
+      <a class="l" href="#styles">Styles</a>
+      <a class="l" href="#gallery">Gallery</a>
     </nav>
-    <a class="word" href="./" aria-label="NOBODY home">NOBODY</a>
-    <a class="act" href="#access">Early access</a>
+    <a class="word" href="./">NOBODY</a>
+    <a class="l act" href="#access">Early access</a>
   </div>
 </header>
 
 <main>
   <!-- ===== HERO ===== -->
+  <!-- EDIT: every photo is set in the PHOTOS list at the bottom. Swap for your own shoot any time. -->
   <section class="hero" style="padding:0">
-    <img class="bgimg" src="img/hero.jpg" alt="" aria-hidden="true">
+    <img class="bw" data-p="hero" alt="A fighter walking out to the ring through the crowd">
+    <div class="in wrap">
+      <h1 class="mega">NOBODY</h1>
+      <div class="row">
+        <p>Premium fightwear for every style. Muay Thai at heart.</p>
+        <a class="lbl" href="#collection">Collection 001</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section class="intro">
+    <div class="wrap">
+      <div class="grid">
+        <div class="lbl mute rv">The house</div>
+        <p class="big rv">Gloves, shorts, wraps and clothing for people who actually train. Built like gear, cut like fashion, made in <em>small runs.</em></p>
+      </div>
+      <div class="pair">
+        <figure class="a rv"><div class="frame"><img class="bw" data-p="intro1" alt="Muay Thai fighters at Lumpinee Stadium, Bangkok" loading="lazy"></div><figcaption class="lbl mute"><span>Bangkok</span><span class="t">Lumpinee</span></figcaption></figure>
+        <figure class="b rv"><div class="frame"><img class="bw" data-p="intro2" alt="Black boxing gloves hanging" loading="lazy"></div><figcaption class="lbl mute"><span>The gym</span><span class="t">Hung up, not retired</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COLLECTION ===== -->
+  <!-- EDIT: products in the PRODUCTS list at the bottom -->
+  <section class="coll" id="collection">
     <div class="wrap grid">
+      <div class="side rv"><div class="frame"><img class="bw" data-p="coll" alt="Fighter wearing boxing gloves" loading="lazy"></div></div>
       <div>
-        <div class="lbl" style="color:var(--gold)">Premium fightwear · Collection 001</div>
-        <h1>Fight is<br><em>culture.</em></h1>
-        <p class="lead"><b>NOBODY makes premium fight gear and clothing.</b> Gloves, shorts, wraps and apparel for boxing, Muay Thai, kickboxing, MMA and every style in between. Real leather, small runs, made to be trained in and worn out of the gym.</p>
-        <div class="ctas">
-          <a class="btn" href="#shop">Shop the collection</a>
-          <a class="btn line" href="#access">Get early access</a>
-        </div>
-      </div>
-      <div class="feature">
-        <img id="heroImg" src="img/p-boxing-oxblood.jpg" alt="NOBODY Fight Glove in oxblood">
-        <div class="cap">
-          <div><span class="lbl">Collection 001</span><b>The Fight Glove</b></div>
-          <div class="dots" id="heroDots"></div>
-        </div>
+        <div class="lbl mute rv">Collection 001</div>
+        <h2 class="rv" style="margin-top:14px">The <em>first</em> five.</h2>
+        <p class="lead rv">Full-grain leather, satin and heavyweight cotton, handmade in Sialkot, the city that makes the world's fight gear, and tested in Richmond gyms before anything goes on sale.</p>
+        <div class="items" id="items"></div>
+        <p class="fine rv">Samples are in production. Product photography lands with the first run.</p>
       </div>
     </div>
   </section>
 
-  <div class="strip" aria-hidden="true"><div class="track" id="strip"></div></div>
+  <!-- ===== BAND ===== -->
+  <section class="band">
+    <img class="bw" data-p="band" alt="Boxers in the ring, black and white" loading="lazy">
+    <blockquote class="rv">Respect the teacher. Respect the opponent. Then go to work.</blockquote>
+  </section>
 
-  <!-- ===== SHOP ===== -->
-  <!-- EDIT: products live in the PRODUCTS list in the script at the bottom -->
-  <section id="shop">
+  <!-- ===== STYLES ===== -->
+  <section class="styles" id="styles">
     <div class="wrap">
       <div class="top">
-        <div class="rv"><div class="num">I.</div><h2>Collection 001</h2></div>
-        <p class="rv">Five pieces to start. Gear for the work, clothes for the walk out. Pre-orders open to the early access list first.</p>
+        <div class="rv"><div class="lbl mute">Every style</div><h2 style="margin-top:14px">One <em>culture.</em></h2></div>
+        <p class="rv">Muay Thai is our first love. But the gym doesn't care what you train, only that you show up.</p>
       </div>
-      <div class="shop-grid" id="shopGrid"></div>
-      <p class="note">Product images are renders. Final samples are in production now.</p>
+      <div class="cards">
+        <div class="card c1 hov rv"><div class="frame"><img class="bw" data-p="mt" alt="Muay Thai fight" loading="lazy"></div><h3>Muay Thai<small lang="th">มวยไทย</small></h3><p>The art of eight limbs. Fists, elbows, knees, shins, and a bow to your teacher before any of it.</p></div>
+        <div class="card hov rv"><div class="frame"><img class="bw" data-p="box" alt="Two boxers sparring" loading="lazy"></div><h3>Boxing</h3><p>The sweet science. Hands wrapped, tape signed, gloves laced.</p></div>
+        <div class="card hov rv"><div class="frame"><img class="bw" data-p="mma" alt="Mixed martial arts bout" loading="lazy"></div><h3>MMA</h3><p>All of it, in one cage. Strike, clinch, wrestle, finish.</p></div>
+      </div>
+      <div class="also rv"><span class="lbl mute">Also welcome</span><span>Kickboxing</span><span>Jiu-Jitsu</span><span>Wrestling</span><span>Judo</span><span>Lethwei</span></div>
     </div>
-  </section>
-
-  <!-- ===== HOW IT'S MADE ===== -->
-  <section class="made" id="made">
-    <div class="wrap">
-      <div class="top">
-        <div class="rv"><div class="num">II.</div><h2>Made like <em>gear.</em><br>Cut like fashion.</h2></div>
-        <p class="rv">No hype pieces that fall apart after a month of rounds. Everything is built to be used hard.</p>
-      </div>
-      <div class="pillars">
-        <div class="pillar rv"><div class="lbl">01 · Material</div><h3>Full-grain leather</h3><p>Real cowhide on every glove. Multi-layer foam, sewn-in thumbs, reinforced seams. It breaks in to your hand, not apart.</p></div>
-        <div class="pillar rv"><div class="lbl">02 · Origin</div><h3>Handmade in Sialkot</h3><p>The Pakistani city that makes most of the world's fight gear. We work directly with the workshops, no middlemen.</p></div>
-        <div class="pillar rv"><div class="lbl">03 · Tested</div><h3>Run through real gyms</h3><p>Every sample gets bag work, pads and sparring in Richmond gyms before anything goes on sale.</p></div>
-      </div>
-      <div class="mats">
-        <div class="mat rv"><img src="img/leather-oxblood.jpg" alt="Oxblood leather swatch" loading="lazy"><span>Oxblood cowhide</span></div>
-        <div class="mat rv"><img src="img/leather-black.jpg" alt="Black leather swatch" loading="lazy"><span>Black cowhide</span></div>
-        <div class="mat rv"><img src="img/leather-bone.jpg" alt="Bone leather swatch" loading="lazy"><span>Bone cowhide</span></div>
-        <div class="mat rv"><img src="img/leather-gold.jpg" alt="Gold trim swatch" loading="lazy"><span>Old gold trim</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CULTURE ===== -->
-  <section class="culture" id="culture">
-    <div class="wrap">
-      <div class="top">
-        <div class="rv"><div class="num">III.</div><h2>Every style.<br><em>One culture.</em></h2></div>
-        <p class="rv">Muay Thai is our first love. But the gym doesn't care what you train, only that you show up. Every style is welcome here.</p>
-      </div>
-      <div class="styles">
-        <div class="st lead rv"><span class="n">01</span><h3>Muay Thai<small lang="th">มวยไทย</small></h3><span class="o lbl">Our first love · the art of eight limbs</span></div>
-        <div class="st rv"><span class="n">02</span><h3>Boxing</h3><span class="o lbl">The sweet science</span></div>
-        <div class="st rv"><span class="n">03</span><h3>Kickboxing</h3><span class="o lbl">Japan &amp; the Dutch gyms</span></div>
-        <div class="st rv"><span class="n">04</span><h3>MMA</h3><span class="o lbl">All of it, in one cage</span></div>
-        <div class="st rv"><span class="n">05</span><h3>Jiu-Jitsu</h3><span class="o lbl">Brazil · the gentle art</span></div>
-        <div class="st rv"><span class="n">06</span><h3>Wrestling</h3><span class="o lbl">The oldest one there is</span></div>
-      </div>
-      <div class="rites">
-        <div class="rite rv"><div class="lbl">Muay Thai</div><h3>Wai Kru</h3><p>The dance before the fight. A bow to your teacher, your camp and the ring, done to live music with the sacred headpiece on.</p></div>
-        <div class="rite rv"><div class="lbl">Boxing</div><h3>The wrap check</h3><p>Hands wrapped in the locker room, checked and signed off before the gloves go on. Your name on the tape.</p></div>
-        <div class="rite rv"><div class="lbl">Judo · Jiu-Jitsu</div><h3>The bow</h3><p>Onto the mat, to your coach, to your partner. Respect before you grip up.</p></div>
-        <div class="rite rv"><div class="lbl">Every style</div><h3>Touch gloves</h3><p>The oldest rule in the room. Respect first, then go to work.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== QUOTE ===== -->
-  <section class="band" style="padding:110px 0">
-    <img src="img/smoke.jpg" alt="" aria-hidden="true">
-    <blockquote class="rv">Respect the teacher. Respect the opponent. <em>Then go to work.</em></blockquote>
   </section>
 
   <!-- ===== GALLERY ===== -->
-  <!-- EDIT: swap these for your own shoot (same file names) -->
-  <section id="gallery">
+  <section class="gallery" id="gallery">
     <div class="wrap">
-      <div class="top">
-        <div class="rv"><div class="num">IV.</div><h2>Gallery</h2></div>
-        <p class="rv">Camp, corners and the hours nobody films.</p>
-      </div>
-      <div class="g" id="g">
-        <figure class="f1 rv"><div class="ph"><img src="img/hero.jpg" alt="Ring ropes in low light" loading="lazy"></div><figcaption class="lbl"><span>01</span><span>Fight night</span></figcaption></figure>
-        <figure class="f2 rv"><div class="ph"><img src="img/corner.jpg" alt="Red corner" loading="lazy"></div><figcaption class="lbl"><span>02</span><span>Red corner</span></figcaption></figure>
-        <figure class="f3 rv"><div class="ph"><img src="img/wraps.jpg" alt="Hand wraps" loading="lazy"></div><figcaption class="lbl"><span>03</span><span>Wraps, before the work</span></figcaption></figure>
-        <figure class="f4 rv"><div class="ph"><img src="img/ropes-blue.jpg" alt="Blue corner ropes" loading="lazy"></div><figcaption class="lbl"><span>04</span><span>Blue corner, last round</span></figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TEAM ===== -->
-  <section class="team" style="border-top:1px solid var(--line)">
-    <div class="wrap grid">
-      <div class="ph rv"><img src="img/smoke.jpg" alt="Spotlight through smoke" loading="lazy"></div>
-      <div>
-        <div class="rv"><div class="num">V.</div><h2>Team NOBODY</h2></div>
-        <p class="rv" style="color:#bdb6a8;margin-top:24px;max-width:46ch">We're building with the fighters, coaches and gyms that keep this culture alive. The ones in warehouses and garages, not just the ones on TV.</p>
-        <ul class="rv">
-          <li><b>Fighters</b><span class="lbl">Gear for camp + fight-night features</span></li>
-          <li><b>Gyms &amp; coaches</b><span class="lbl">Team pricing, custom runs</span></li>
-          <li><b>Creators</b><span class="lbl">Affiliate codes that pay</span></li>
-        </ul>
-        <a class="btn line rv" href="#access" id="applyBtn">Apply to the team</a>
+      <div class="lbl mute rv" style="margin-bottom:30px">Gallery</div>
+      <div class="gl" id="gl">
+        <figure class="g1 rv"><div class="frame"><img class="bw" data-p="g1" alt="Sparring in a boxing gym" loading="lazy"></div></figure>
+        <figure class="g2 rv"><div class="frame"><img class="bw" data-p="g2" alt="Muay Thai fighter in the ring" loading="lazy"></div></figure>
+        <figure class="g3 rv"><div class="frame"><img class="bw" data-p="g3" alt="Head kick" loading="lazy"></div></figure>
+        <figure class="g4 rv"><div class="frame"><img class="bw" data-p="g4" alt="Fighter holding boxing gloves" loading="lazy"></div></figure>
+        <figure class="g5 rv"><div class="frame"><img class="bw" data-p="g5" alt="Heavy bag work" loading="lazy"></div></figure>
+        <figure class="g6 rv"><div class="frame"><img class="bw" data-p="g6" alt="Muay Thai fighter" loading="lazy"></div></figure>
       </div>
     </div>
   </section>
@@ -346,17 +254,17 @@
   <!-- ===== ACCESS ===== -->
   <section class="access" id="access">
     <div class="wrap">
-      <div class="lbl rv">Collection 001 · Limited run</div>
-      <h2 class="rv" style="margin-top:18px">Get early <em>access.</em></h2>
-      <p class="sub rv">The list gets first shot at pre-orders, early pricing and a say in the next drop.</p>
+      <div class="lbl mute rv">Collection 001 · Limited run</div>
+      <h2 class="rv" style="margin-top:16px">Early <em>access.</em></h2>
+      <p class="sub rv">First look at the pieces, first shot at pre-orders, and a say in what comes next.</p>
       <!-- EDIT: replace YOUR_FORM_ID with your Formspree form code -->
       <form id="aform" class="rv" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" novalidate>
         <input type="hidden" name="_subject" value="NOBODY · early access">
         <label class="hp" aria-hidden="true">Leave blank <input name="_gotcha" tabindex="-1" autocomplete="off"></label>
         <input name="email" type="email" placeholder="Email address" aria-label="Email address" required autocomplete="email">
-        <select name="interest" id="fInterest" aria-label="What you want"></select>
-        <select name="discipline" id="fStyle" aria-label="What you train">
-          <option>I train Muay Thai</option><option>I train Boxing</option><option>I train Kickboxing</option><option>I train MMA</option><option>I train Jiu-Jitsu</option><option>I train Wrestling</option><option>I coach / own a gym</option><option>I just like the clothes</option>
+        <select name="interest" id="fInterest" aria-label="Piece you want"></select>
+        <select name="discipline" aria-label="What you train">
+          <option>Muay Thai</option><option>Boxing</option><option>Kickboxing</option><option>MMA</option><option>Jiu-Jitsu</option><option>Wrestling</option><option>Coach / gym owner</option><option>Just the clothes</option>
         </select>
         <button type="submit" id="send">Sign up</button>
       </form>
@@ -371,86 +279,65 @@
     <div class="row">
       <span class="lbl">Premium fightwear · Richmond, VA</span>
       <!-- EDIT: Instagram link -->
-      <span class="lbl"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a> &nbsp;·&nbsp; © <span id="yr"></span> NOBODY</span>
+      <span class="lbl"><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a> &nbsp;·&nbsp; © <span id="yr"></span></span>
     </div>
+    <p class="credits" id="credits"></p>
   </div>
 </footer>
 
-<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button type="button" id="lbx">Close</button>
-  <img id="lbi" alt="">
-  <p id="lbc"></p>
-</div>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Image viewer"><button type="button">Close</button><img id="lbi" alt=""></div>
 
 <script>
-  // EDIT: Collection 001. Each colorway: name, swatch color, image. price: put a number like "$140" when set.
-  const PRODUCTS = [
-    {id:"fight-glove", name:"The Fight Glove", cat:"Boxing · Muay Thai · Kickboxing", big:true,
-     desc:"Full-grain cowhide, lace-up wrist, multi-layer foam. Built for sparring and bag work, finished like a luxury good.",
-     specs:["10 · 12 · 14 · 16 oz","Lace-up","Full-grain leather"], price:"Pre-order soon",
-     colors:[{n:"Oxblood",c:"#7a141c",img:"img/p-boxing-oxblood.jpg"},{n:"Black / Gold",c:"#1d1b19",img:"img/p-boxing-black.jpg"}]},
-    {id:"mma-glove", name:"The Hybrid MMA Glove", cat:"MMA · Grappling", big:true,
-     desc:"Open palm for grips and clinch work, padded knuckle for sparring. Wide leather strap that actually stays put.",
-     specs:["7 oz","Open palm","Full-grain leather"], price:"Pre-order soon",
-     colors:[{n:"Bone / Black",c:"#e0d8c8",img:"img/p-mma-bone.jpg"}]},
-    {id:"camp-short", name:"The Camp Short", cat:"Muay Thai · Kickboxing",
-     desc:"Classic Thai cut. High side splits, wide waistband, satin that moves when you kick.",
-     specs:["Satin","S – XXL","Gold hem"], price:"Pre-order soon",
-     colors:[{n:"Black / Gold",c:"#1d1b19",img:"img/p-shorts-black.jpg"}]},
-    {id:"tee", name:"The Heavyweight Tee", cat:"Apparel",
-     desc:"Thick 300gsm cotton, boxy fit, garment washed. For the gym and the walk home.",
-     specs:["300gsm cotton","Boxy fit","S – XXL"], price:"Pre-order soon",
-     colors:[{n:"Washed black",c:"#262422",img:"img/p-tee-black.jpg"}]},
-    {id:"wrap", name:"The Wrap", cat:"Every style",
-     desc:"180 inches, semi-elastic, thumb loop and wide hook-and-loop closure. First thing on, last thing off.",
-     specs:["180 in","Semi-elastic","Pair"], price:"Pre-order soon",
-     colors:[{n:"Bone",c:"#e0d8c8",img:"img/wraps.jpg"}]},
-  ];
-  const STYLES = ["Muay Thai","มวยไทย","Boxing","Kickboxing","MMA","Jiu-Jitsu","Wrestling","Judo","Lethwei","Savate"];
-
-  // strip
-  const strip = document.getElementById("strip");
-  [...STYLES, ...STYLES].forEach(s => { const e = document.createElement("span"); e.textContent = s; if (/[฀-๿]/.test(s)) { e.className = "th"; e.lang = "th"; } strip.appendChild(e); });
-
-  // dots helper
-  const makeDots = (holder, colors, onPick) => {
-    if (colors.length < 2) return;
-    colors.forEach((c, i) => {
-      const b = document.createElement("button"); b.type = "button"; b.className = "dot";
-      b.style.setProperty("--c", c.c); b.title = c.n; b.setAttribute("aria-label", c.n); b.setAttribute("aria-pressed", i === 0);
-      b.onclick = e => { e.stopPropagation(); holder.querySelectorAll(".dot").forEach(x => x.setAttribute("aria-pressed", x === b)); onPick(c); };
-      holder.appendChild(b);
-    });
+  // EDIT: photos. Free under the Unsplash License. Replace an id with your own file (e.g. "img/hero.jpg") once you shoot.
+  const PHOTOS = {
+    hero:  {id:"photo-1552072092-7f9b8d63efcb", by:"Attentie Attentie", w:2400},
+    intro1:{id:"photo-1601588462060-470011bd9a18", by:"Nick Wang"},
+    intro2:{id:"photo-1549719386-74dfcbf7dbed", by:"Bogdan Yukhymchuk"},
+    coll:  {id:"photo-1615117972428-28de67cda58e", by:"Vladislav Bychkov"},
+    band:  {id:"photo-1562679452-763edf60a0b7", by:"Wade Austin Ellis", w:2400},
+    mt:    {id:"photo-1601588462477-e76b16de79f3", by:"Nick Wang"},
+    box:   {id:"photo-1495555687398-3f50d6e79e1e", by:"Hermes Rivera"},
+    mma:   {id:"photo-1486215397028-cb4f31efea3e", by:"Solal Ohayon"},
+    g1:    {id:"photo-1517438322307-e67111335449", by:"MARK ADRIANE"},
+    g2:    {id:"photo-1601588462735-8db8cab4847a", by:"Nick Wang"},
+    g3:    {id:"photo-1575800605380-ca1d27744f2c", by:"Alex Harmuth"},
+    g4:    {id:"photo-1600346854663-4757682e8bf4", by:"Jonathan Tomas"},
+    g5:    {id:"photo-1765303191119-89d0221d5c0b", by:"Anastase Maragos"},
+    g6:    {id:"photo-1601588462673-86b4a4020aa0", by:"Nick Wang"},
   };
-
-  // hero colorways
-  const heroImg = document.getElementById("heroImg");
-  makeDots(document.getElementById("heroDots"), PRODUCTS[0].colors, c => { heroImg.src = c.img; heroImg.alt = "NOBODY Fight Glove in " + c.n; });
-
-  // shop grid
-  const grid = document.getElementById("shopGrid"), fInterest = document.getElementById("fInterest");
-  PRODUCTS.forEach(p => {
-    const a = document.createElement("article"); a.className = "prod rv" + (p.big ? " big" : "");
-    a.innerHTML = `<div class="ph"><img src="${p.colors[0].img}" alt="${p.name}, ${p.colors[0].n}" loading="lazy"><span class="badge">${p.colors[0].n}</span></div>
-      <div class="row1"><h3>${p.name}</h3><span class="price">${p.price}</span></div>
-      <div class="lbl cat">${p.cat}</div>
-      <p>${p.desc}</p>
-      <ul class="specs">${p.specs.map(s => `<li>${s}</li>`).join("")}</ul>
-      <div class="foot"><div class="dots"></div><button type="button" class="notify">Notify me</button></div>`;
-    const img = a.querySelector("img"), badge = a.querySelector(".badge");
-    makeDots(a.querySelector(".dots"), p.colors, c => { img.src = c.img; img.alt = p.name + ", " + c.n; badge.textContent = c.n; });
-    a.querySelector(".notify").onclick = () => { fInterest.value = p.name; document.getElementById("access").scrollIntoView(); };
-    grid.appendChild(a);
-    const o = document.createElement("option"); o.textContent = p.name; fInterest.appendChild(o);
+  const src = (p, w) => p.id.startsWith("photo-") ? `https://images.unsplash.com/${p.id}?auto=format&fit=crop&w=${w}&q=78` : p.id;
+  document.querySelectorAll("img[data-p]").forEach(img => {
+    const p = PHOTOS[img.dataset.p]; if (!p) return;
+    img.src = src(p, p.w || 1400);
+    img.dataset.full = src(p, 2200);
   });
-  const all = document.createElement("option"); all.textContent = "The whole collection"; fInterest.prepend(all); fInterest.value = all.textContent;
-  document.getElementById("applyBtn").onclick = () => { document.getElementById("fStyle").value = "I coach / own a gym"; };
+  const names = [...new Set(Object.values(PHOTOS).map(p => p.by))];
+  document.getElementById("credits").textContent = "Photography via Unsplash: " + names.join(", ") + ".";
+
+  // EDIT: Collection 001
+  const PRODUCTS = [
+    {name:"The Fight Glove", cat:"Boxing · Muay Thai · Kickboxing", d:"Full-grain cowhide, lace-up wrist, multi-layer foam. Oxblood, or black with gold.", specs:"10 · 12 · 14 · 16 oz"},
+    {name:"The Hybrid MMA Glove", cat:"MMA · Grappling", d:"Open palm for the clinch and the grips, padded knuckle for sparring.", specs:"7 oz · bone or black"},
+    {name:"The Camp Short", cat:"Muay Thai · Kickboxing", d:"Classic Thai cut, high splits, wide waistband, satin with a gold hem.", specs:"S – XXL"},
+    {name:"The Wrap", cat:"Every style", d:"180 inches, semi-elastic, thumb loop, wide closure.", specs:"Pair · bone or black"},
+    {name:"The Heavyweight Tee", cat:"Apparel", d:"Thick 300gsm cotton, boxy fit, garment washed.", specs:"S – XXL · washed black"},
+  ];
+  const items = document.getElementById("items"), fi = document.getElementById("fInterest");
+  const all = document.createElement("option"); all.textContent = "The whole collection"; fi.appendChild(all);
+  PRODUCTS.forEach((p, i) => {
+    const el = document.createElement("div"); el.className = "item rv";
+    el.innerHTML = `<span class="n">0${i+1}</span>
+      <div><h3>${p.name}</h3><div class="lbl" style="margin-top:8px;color:#8f8a80">${p.cat}</div><p class="d">${p.d}</p><div class="lbl specs">${p.specs}</div></div>
+      <div class="r"><div class="lbl" style="color:#c9a96e">Coming soon</div><button type="button">Notify me</button></div>`;
+    el.querySelector("button").onclick = () => { fi.value = p.name; document.getElementById("access").scrollIntoView(); };
+    items.appendChild(el);
+    const o = document.createElement("option"); o.textContent = p.name; fi.appendChild(o);
+  });
 
   // lightbox
-  const lb = document.getElementById("lb"), lbi = document.getElementById("lbi"), lbc = document.getElementById("lbc");
-  document.querySelectorAll("#g figure").forEach(f => f.addEventListener("click", () => {
-    const im = f.querySelector("img"); lbi.src = im.src; lbi.alt = im.alt;
-    lbc.textContent = f.querySelector("figcaption span:last-child").textContent;
+  const lb = document.getElementById("lb"), lbi = document.getElementById("lbi");
+  document.querySelectorAll("#gl figure").forEach(f => f.addEventListener("click", () => {
+    const im = f.querySelector("img"); lbi.src = im.dataset.full; lbi.alt = im.alt; lbi.className = "bw";
     lb.hidden = false; document.body.style.overflow = "hidden";
   }));
   const close = () => { lb.hidden = true; document.body.style.overflow = ""; };
@@ -471,7 +358,6 @@
     send.disabled = false;
   });
 
-  // reveal
   const io = new IntersectionObserver(es => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add("in"); io.unobserve(x.target); } }), {threshold:.08, rootMargin:"0px 0px -5% 0px"});
   document.querySelectorAll(".rv").forEach(el => io.observe(el));
   document.getElementById("yr").textContent = new Date().getFullYear();
